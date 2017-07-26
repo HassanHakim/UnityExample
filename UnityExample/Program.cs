@@ -12,10 +12,10 @@ namespace UnityExample
     {
         static void Main(string[] args)
         {
-          //  IUnityContainer container = new UnityContainer();
-            IUnityContainer container = new UnityContainer()
-                .LoadConfiguration();
-     //       container.RegisterType<IDataRepository, ADORepo>();
+            //IUnityContainer container = new UnityContainer();
+            //container.RegisterType<IDataRepository, ADORepo>();
+
+            IUnityContainer container = new UnityContainer().LoadConfiguration();          
             Logic logic = container.Resolve<Logic>();
             logic.Add();
             logic.Remove();
